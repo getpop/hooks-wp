@@ -31,7 +31,7 @@
             "PoP\\HooksWP\\": "src"
         },
         "files": [
-            "src/Initialization.php"
+            "src/Component.php"
         ]
     },
     "autoload-dev": {

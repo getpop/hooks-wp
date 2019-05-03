@@ -19,7 +19,7 @@ class Component
     public static function init()
     {
         self::$active = true;
-        \PoP\Hooks\HooksAPIFactory::setInstance(new ContractImplementations\HooksAPI());
+        \PoP\Hooks\Contracts\HooksAPIFactory::setInstance(new ContractImplementations\HooksAPI());
     }
 }
 

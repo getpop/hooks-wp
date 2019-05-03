@@ -12,14 +12,15 @@ class Component
      * @var boolean
      */
     public static $active;
+    
     /**
      * Initialize services
      */
-    public function __construct()
+    public static function init()
     {
         self::$active = true;
-        new ContractImplementations\HooksAPI();
+        \PoP\Hooks\HooksAPIFactory::setInstance(new ContractImplementations\HooksAPI());
     }
 }
 
-new Component();
+Component::init();

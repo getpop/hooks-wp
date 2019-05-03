@@ -23,7 +23,3 @@ class HooksAPI extends \PoP\Hooks\Contracts\AbstractHooksAPI
     }
 }
 
-/**
- * Initialize
- */
-new HooksAPI();

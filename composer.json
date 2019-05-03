@@ -7,7 +7,6 @@
         "hooks",
         "WordPress"
     ],
-    "minimum-stability": "dev",
     "homepage": "https://github.com/getpop/hooks-wp",
     "license": "MIT",
     "authors": [

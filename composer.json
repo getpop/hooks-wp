@@ -16,6 +16,8 @@
             "homepage": "https://getpop.org"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": "~7.1",
         "getpop/hooks": "dev-master"

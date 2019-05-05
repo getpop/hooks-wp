@@ -22,5 +22,3 @@ class Component
         \PoP\Hooks\Contracts\HooksAPIFactory::setInstance(new ContractImplementations\HooksAPI());
     }
 }
-
-Component::init();

@@ -3,27 +3,27 @@ namespace PoP\HooksWP\ContractImplementations;
 
 class HooksAPI implements \PoP\Hooks\Contracts\HooksAPIInterface
 {
-    public function addFilter($tag, $function_to_add, $priority = 10, $accepted_args = 1)
+    public function addFilter(string $tag, $function_to_add, int $priority = 10, int $accepted_args = 1): void
     {
         return add_filter($tag, $function_to_add, $priority, $accepted_args);
     }
-    public function removeFilter($tag, $function_to_remove, $priority = 10)
+    public function removeFilter(string $tag, $function_to_remove, int $priority = 10): void
     {
         return remove_filter($tag, $function_to_remove, $priority);
     }
-    public function applyFilters($tag, $value, ...$args)
+    public function applyFilters(string $tag, $value, ...$args)
     {
         return apply_filters($tag, $value, ...$args);
     }
-    public function addAction($tag, $function_to_add, $priority = 10, $accepted_args = 1)
+    public function addAction(string $tag, $function_to_add, int $priority = 10, int $accepted_args = 1): void
     {
         return add_action($tag, $function_to_add, $priority, $accepted_args);
     }
-    public function removeAction($tag, $function_to_remove, $priority = 10)
+    public function removeAction(string $tag, $function_to_remove, int $priority = 10): void
     {
         return remove_action($tag, $function_to_remove, $priority);
     }
-    public function doAction($tag, ...$args)
+    public function doAction(string $tag, ...$args): void
     {
         return do_action($tag, ...$args);
     }

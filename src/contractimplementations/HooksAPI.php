@@ -9,7 +9,7 @@ class HooksAPI implements \PoP\Hooks\Contracts\HooksAPIInterface
     }
     public function removeFilter(string $tag, $function_to_remove, int $priority = 10): bool
     {
-        remove_filter($tag, $function_to_remove, $priority);
+        return remove_filter($tag, $function_to_remove, $priority);
     }
     public function applyFilters(string $tag, $value, ...$args)
     {
@@ -21,7 +21,7 @@ class HooksAPI implements \PoP\Hooks\Contracts\HooksAPIInterface
     }
     public function removeAction(string $tag, $function_to_remove, int $priority = 10): bool
     {
-        remove_action($tag, $function_to_remove, $priority);
+        return remove_action($tag, $function_to_remove, $priority);
     }
     public function doAction(string $tag, ...$args): void
     {

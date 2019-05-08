@@ -24,6 +24,7 @@ class Component
     {
         self::$active = true;
 
+        // Initialize the ContainerBuilder with this component's service implementations
         $containerBuilder = ContainerBuilderFactory::getInstance();
         $loader = new YamlFileLoader($containerBuilder, new FileLocator(dirname(__DIR__)));
         $loader->load('config/services.yaml');

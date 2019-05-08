@@ -1,0 +1,3 @@
+services:
+    \PoP\Hooks\Contracts\HooksAPI:
+        class: \PoP\HooksWP\ContractImplementations\HooksAPI

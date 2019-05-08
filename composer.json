@@ -18,6 +18,9 @@
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "provide": {
+        "getpop/hooks-contracts-implementation": "dev-master"
+    },
     "require": {
         "php": "~7.1",
         "getpop/hooks": "dev-master"

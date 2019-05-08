@@ -2,8 +2,7 @@
 declare(strict_types=1);
 namespace PoP\HooksWP;
 
-use PoP\Root\Container\ContainerBuilderFactory;
-use PoP\Hooks\ContractImplementations\HooksAPI;
+use PoP\Hooks\Facades\HooksAPI;
 
 class HooksAPITestCase extends \PHPUnit\Framework\TestCase
 {
@@ -12,7 +11,7 @@ class HooksAPITestCase extends \PHPUnit\Framework\TestCase
      */
     public function testApplyFilters(): void
     {
-        $hooksapi = \PoP\Hooks\Facades\HooksAPI::getInstance();
+        $hooksapi = HooksAPI::getInstance();
         $this->assertEquals(
             'bar',
             $hooksapi->applyFilters('foo', 'bar')

@@ -16,7 +16,18 @@ WordPress implementation of the contracts to implement hooks (filters and action
 Via Composer
 
 ``` bash
-$ composer require getpop/hooks-wp
+$ composer require getpop/hooks-wp dev-master
+```
+
+**Note:** Your `composer.json` file must have the configuration below to accept minimum stability `"dev"` (there are no releases for PoP yet, and the code is installed directly from the `master` branch):
+
+```javascript
+{
+    ...
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    ...
+}
 ```
 
 ## Change log

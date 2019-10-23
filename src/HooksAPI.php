@@ -1,7 +1,7 @@
 <?php
-namespace PoP\HooksWP\ContractImplementations;
+namespace PoP\HooksWP;
 
-class HooksAPI implements \PoP\Hooks\Contracts\HooksAPIInterface
+class HooksAPI implements \PoP\Hooks\HooksAPIInterface
 {
     public function addFilter(string $tag, $function_to_add, int $priority = 10, int $accepted_args = 1): void
     {

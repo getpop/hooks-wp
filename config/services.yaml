@@ -1,4 +1,4 @@
 services:        
     hooks_api:
-        class: \PoP\HooksWP\ContractImplementations\HooksAPI
+        class: \PoP\HooksWP\HooksAPI
         public: true

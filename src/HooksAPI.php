@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace PoP\HooksWP;
 
 class HooksAPI implements \PoP\Hooks\HooksAPIInterface

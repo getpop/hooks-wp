@@ -1,2 +1,2 @@
 <?php
-\PoP\HooksWP\Component::init();
+//\PoP\HooksWP\Component::initialize();

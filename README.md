@@ -25,7 +25,9 @@ composer require getpop/hooks-wp
 Initialize the component:
 
 ``` php
-\PoP\HooksWP\Component::initialize();
+\PoP\Root\ComponentLoader::initializeComponents([
+    \PoP\HooksWP\Component::class,
+]);
 ```
 
 ## Standards

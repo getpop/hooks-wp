@@ -6,26 +6,34 @@ namespace PoP\HooksWP;
 
 class HooksAPI implements \PoP\Hooks\HooksAPIInterface
 {
-    public function addFilter(string $tag, $function_to_add, int $priority = 10, int $accepted_args = 1): void
+    public function addFilter(string $tag, callable $function_to_add, int $priority = 10, int $accepted_args = 1): void
     {
         \add_filter($tag, $function_to_add, $priority, $accepted_args);
     }
-    public function removeFilter(string $tag, $function_to_remove, int $priority = 10): bool
+    public function removeFilter(string $tag, callable $function_to_remove, int $priority = 10): bool
     {
         return \remove_filter($tag, $function_to_remove, $priority);
     }
+    /**
+     * @param mixed $value
+     * @param mixed ...$arg
+     * @return mixed
+     */
     public function applyFilters(string $tag, $value, ...$args)
     {
         return \apply_filters($tag, $value, ...$args);
     }
-    public function addAction(string $tag, $function_to_add, int $priority = 10, int $accepted_args = 1): void
+    public function addAction(string $tag, callable $function_to_add, int $priority = 10, int $accepted_args = 1): void
     {
         \add_action($tag, $function_to_add, $priority, $accepted_args);
     }
-    public function removeAction(string $tag, $function_to_remove, int $priority = 10): bool
+    public function removeAction(string $tag, callable $function_to_remove, int $priority = 10): bool
     {
         return \remove_action($tag, $function_to_remove, $priority);
     }
+    /**
+     * @param mixed ...$arg
+     */
     public function doAction(string $tag, ...$args): void
     {
         \do_action($tag, ...$args);

@@ -23,7 +23,8 @@
     },
     "require": {
         "php": "~7.4",
-        "getpop/hooks": "dev-master"
+        "getpop/hooks": "dev-master",
+        "getpop/translation-wp": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": ">=9.3",

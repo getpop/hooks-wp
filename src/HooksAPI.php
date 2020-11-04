@@ -14,6 +14,11 @@ class HooksAPI implements \PoP\Hooks\HooksAPIInterface
     {
         return \remove_filter($tag, $function_to_remove, $priority);
     }
+    /**
+     * @param mixed $value
+     * @param mixed ...$args
+     * @return mixed
+     */
     public function applyFilters(string $tag, $value, ...$args)
     {
         return \apply_filters($tag, $value, ...$args);
@@ -26,6 +31,9 @@ class HooksAPI implements \PoP\Hooks\HooksAPIInterface
     {
         return \remove_action($tag, $function_to_remove, $priority);
     }
+    /**
+     * @param mixed ...$args
+     */
     public function doAction(string $tag, ...$args): void
     {
         \do_action($tag, ...$args);

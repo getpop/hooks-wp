@@ -22,7 +22,7 @@
         "getpop/hooks-contracts-implementation": "~0.1"
     },
     "require": {
-        "php": "~7.4",
+        "php": "^7.4|^8.0",
         "getpop/hooks": "dev-master",
         "getpop/translation-wp": "dev-master"
     },
